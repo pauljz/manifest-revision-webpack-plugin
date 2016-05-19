@@ -60,7 +60,6 @@ ManifestRevisionPlugin.prototype.parsedAssets = function (data) {
         if (item.name.indexOf('multi ') === -1 &&
             item.name.indexOf('~/') === -1 &&
             item.reasons.length === 0 &&
-            fs.lstatSync(item.name).isFile() &&
             item.hasOwnProperty('assets') &&
             item.assets.length === 1) {
 
